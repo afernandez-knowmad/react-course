@@ -1,7 +1,7 @@
-import { CSSProperties } from 'react';
+import { type CSSProperties } from 'react';
 
-const firstName = 'Fernando';
-const lastName = 'Herrera';
+const firstName = 'Alex';
+const lastName = 'Fernandez';
 
 const favoriteGames = ['Elden Ring', 'Smash', 'Metal Gear'];
 const isActive = false;
@@ -21,8 +21,8 @@ const myStyles: CSSProperties = {
 export const MyAwesomeApp = () => {
   return (
     <>
-      <h1> {firstName} </h1>
-      <h3> {lastName} </h3>
+      <h1 data-testid="first-name"> {firstName} </h1>
+      <h3 data-testid="last-name"> {lastName} </h3>
 
       <p>{favoriteGames.join(', ')}</p>
       <p>{2 + 2}</p>
