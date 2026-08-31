@@ -4,7 +4,7 @@ import '@testing-library/jest-dom/vitest';
 import { MyAwesomeApp } from './MyAwesomeApp';
 
 describe('MyAwesomeApp', () => {
-  test('should render firstName and lastName correctly', () => {
+  test('should render firstName and lastName with querySelector', () => {
     const { container } = render(<MyAwesomeApp />);
     screen.debug();
     // expect(container).toHaveTextContent('Alex');
@@ -16,13 +16,19 @@ describe('MyAwesomeApp', () => {
     expect(h3Element?.innerHTML).toContain('Fernandez'); // Este si pasa el test
   });
 
-  test('should render firstName and lastName correctly', () => {
+  test('should render firstName and lastName with testId', () => {
     render(<MyAwesomeApp />);
     screen.debug();
     // const h1Element = screen.getByRole('heading', { level: 1 });
     // console.log("🚀 ~ h1Element:", h1Element)
    const h1Element = screen.getByTestId('first-name');
     expect(h1Element?.innerHTML).toContain('Alex'); // Este si pasa el test
+  });
+
+  test('should render firstName and lastName snapshot', () => {
+    render(<MyAwesomeApp />);
+    const { container } = render(<MyAwesomeApp />);
+    expect(container).toMatchSnapshot();
   });
 });
   
