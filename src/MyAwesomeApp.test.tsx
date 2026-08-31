@@ -21,7 +21,7 @@ describe('MyAwesomeApp', () => {
     screen.debug();
     // const h1Element = screen.getByRole('heading', { level: 1 });
     // console.log("🚀 ~ h1Element:", h1Element)
-   const h1Element = screen.getByTestId('first-name');
+    const h1Element = screen.getByTestId('first-name');
     expect(h1Element?.innerHTML).toContain('Alex'); // Este si pasa el test
   });
 
@@ -31,4 +31,3 @@ describe('MyAwesomeApp', () => {
     expect(container).toMatchSnapshot();
   });
 });
-  
