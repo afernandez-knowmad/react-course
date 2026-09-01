@@ -10,7 +10,7 @@ export const SearchBar = ({ placeholder = 'Buscar', onSearch }: SearchBarProps) 
 
     const handleSearch = () => {
         onSearch(query);
-        // setQuery('');
+        // setQuery(''); // Reset el valor de input de busqueda después de realizar la búsqueda
     };
 
     const handleKeydown = (event: React.KeyboardEvent<HTMLInputElement>) => {

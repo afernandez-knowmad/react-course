@@ -9,10 +9,18 @@ import type { Gif } from '../interfaces/gif.interface'
 export const GifsApp = () => {
 
     const [gifs, setGifs] = useState<Gif[]>([]);
-    const [previousTerms, setPreviousTerm] = useState<string[]>(['Drangon Ball', 'One Piece', 'Naruto']);
+    const [previousTerms, setPreviousTerm] = useState<string[]>(['drangon ball', 'pokemon', 'naruto']);
 
-    const handleTermClicked = (term: string) => {
+    const handleTermClicked = async (term: string) => {
         console.log(`Term clicked: ${term}`);
+
+        term = term.trim().toLocaleLowerCase();
+        if (term === '') return;
+
+        setPreviousTerm([term, ...previousTerms.filter(t => t !== term)]);
+
+        const foundGifs = await getGifsByQuery(term);
+        setGifs(foundGifs);
     };
 
     const handleSearch = async (search: string) => {

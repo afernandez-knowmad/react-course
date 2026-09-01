@@ -5,11 +5,9 @@ interface CustomHeaderProps {
 
 export const CustomHeader = ({ title, subtitle }: CustomHeaderProps) => {
     return (
-        <>
-            <div className='content-center'>
-                <h1>{title}</h1>
-                <p>{subtitle}</p>
-            </div>
-        </>
+        <div className='content-center'>
+            <h1>{title}</h1>
+            <p>{subtitle}</p>
+        </div>
     )
 }
