@@ -1,0 +1,51 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`GifsApp > should match snapshot 1`] = `
+<div>
+  <div
+    class="content-center"
+  >
+    <h1>
+      Buscador de Gifs
+    </h1>
+    <p>
+      Encuentra los mejores gifs aquí
+    </p>
+  </div>
+  <div
+    class="search-container"
+  >
+    <input
+      placeholder="Escribe para buscar un gif"
+      type="text"
+      value=""
+    />
+    <button>
+      Buscar
+    </button>
+  </div>
+  <div
+    class="previous-searches"
+  >
+    <h2>
+      Busquedas Anteriores
+    </h2>
+    <ul
+      class="previous-searches-list"
+    >
+      <li>
+        drangon ball
+      </li>
+      <li>
+        pokemon
+      </li>
+      <li>
+        naruto
+      </li>
+    </ul>
+  </div>
+  <div
+    class="gifs-container"
+  />
+</div>
+`;
