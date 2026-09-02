@@ -5,10 +5,11 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "tsc -b && vite build",
+    "build": "npm run test:only && tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview",
     "test": "vitest",
+    "test:only": "vitest run",
     "test:ui": "vitest --ui",
     "coverage": "vitest run --coverage"
   },
