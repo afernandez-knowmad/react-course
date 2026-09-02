@@ -1,0 +1,28 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`CustomHeader > should render the subtitle when provided 1`] = `
+<div>
+  <div
+    class="content-center"
+  >
+    <h1>
+      Test Title
+    </h1>
+    <p>
+      Test Description
+    </p>
+  </div>
+</div>
+`;
+
+exports[`CustomHeader > should render the title correctly 1`] = `
+<div>
+  <div
+    class="content-center"
+  >
+    <h1>
+      Test Title
+    </h1>
+  </div>
+</div>
+`;

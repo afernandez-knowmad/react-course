@@ -7,7 +7,7 @@ export const CustomHeader = ({ title, subtitle }: CustomHeaderProps) => {
     return (
         <div className='content-center'>
             <h1>{title}</h1>
-            <p>{subtitle}</p>
+            {subtitle && <p>{subtitle}</p>}
         </div>
     )
 }
