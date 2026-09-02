@@ -1,0 +1,35 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`SearchBar > should create the search component 1`] = `
+<div>
+  <div
+    class="search-container"
+  >
+    <input
+      placeholder="Search..."
+      type="text"
+      value=""
+    />
+    <button>
+      Buscar
+    </button>
+  </div>
+</div>
+`;
+
+exports[`SearchBar > should display the correct placeholder 1`] = `
+<div>
+  <div
+    class="search-container"
+  >
+    <input
+      placeholder="Search..."
+      type="text"
+      value=""
+    />
+    <button>
+      Buscar
+    </button>
+  </div>
+</div>
+`;

@@ -22,12 +22,10 @@ export const SearchBar = ({ placeholder = 'Buscar', onSearch }: SearchBarProps) 
     useEffect(() => {
         const timeoutId = setTimeout(() => {
             onSearch(query);
-            console.log('SearchBar mounted');
         }, 700);
 
         return () => {
             clearTimeout(timeoutId);
-            console.log('SearchBar unmounted');
         }
     }, [query, onSearch]);
 
