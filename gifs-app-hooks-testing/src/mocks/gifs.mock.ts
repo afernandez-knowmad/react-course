@@ -2,45 +2,73 @@ import type { Gif } from "../gifs/interfaces/gif.interface";
 
 export const mockGifs: Gif[] = [
   {
-    id: '1',
-    title: "Superman's Cake",
-    url: 'https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExZWVxbHY0dncxMHJlZXRvOTY3MXl5cHp0dWs4aG5iY3d0ZWhlcDM5diZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/0GtVKtagi2GvWuY3vm/giphy.gif',
-    width: 300,
-    height: 300,
+    id: 'EIXWGdjKzTFwEXSw66',
+    title: 'Cat Dancing GIF',
+    url: 'https://media3.giphy.com/media/v1.Y2lkPTYzMTIxZGJiYmF1d21md3o2cjR6YzJieTJ5OTl6bW9xb3kzYjc4dnAzbXlvb25ibyZlcD12MV9naWZzX3NlYXJjaCZjdD1n/EIXWGdjKzTFwEXSw66/giphy.gif',
+    width: 270,
+    height: 480
   },
   {
-    id: '2',
-    title: 'Funny Cat',
-    url: 'https://media.giphy.com/media/3oriO0OEd9QIDdllqo/giphy.gif',
-    width: 400,
-    height: 250,
+    id: 'ZlHG4gSXeFpur3Rzvu',
+    title: 'Cats Dancing GIF',
+    url: 'https://media2.giphy.com/media/v1.Y2lkPTYzMTIxZGJiYmF1d21md3o2cjR6YzJieTJ5OTl6bW9xb3kzYjc4dnAzbXlvb25ibyZlcD12MV9naWZzX3NlYXJjaCZjdD1n/ZlHG4gSXeFpur3Rzvu/giphy.gif',
+    width: 480,
+    height: 320
   },
   {
-    id: '3',
-    title: 'Happy BDay!',
-    url: 'https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExcG40N2cyZm1iZGM2aWlhbHF1bnZmdzkxZ29idTY3ZzZkbnowNDg4OSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/xatKdEypHxBjzabUPV/giphy.gif',
-    width: 280,
-    height: 350,
+    id: 'rKCUYdpnhwS8qCpCIY',
+    title: 'Angry Cat GIF',
+    url: 'https://media3.giphy.com/media/v1.Y2lkPTYzMTIxZGJiYmF1d21md3o2cjR6YzJieTJ5OTl6bW9xb3kzYjc4dnAzbXlvb25ibyZlcD12MV9naWZzX3NlYXJjaCZjdD1n/rKCUYdpnhwS8qCpCIY/giphy.gif',
+    width: 360,
+    height: 480
   },
   {
-    id: '4',
-    title: 'Thumbs Up',
-    url: 'https://media.giphy.com/media/3o7abKhOpu0NwenH3O/giphy.gif',
-    width: 300,
-    height: 200,
+    id: 'EFnV02XHwNeIX65Gc7',
+    title: 'Fat Cat GIF',
+    url: 'https://media4.giphy.com/media/v1.Y2lkPTYzMTIxZGJiYmF1d21md3o2cjR6YzJieTJ5OTl6bW9xb3kzYjc4dnAzbXlvb25ibyZlcD12MV9naWZzX3NlYXJjaCZjdD1n/EFnV02XHwNeIX65Gc7/giphy.gif',
+    width: 264,
+    height: 480
   },
   {
-    id: '5',
-    title: 'Elmo is the best',
-    url: 'https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExaG5zMmVsNDFzam56bmR6azl0bmFvbHQxdDczeDNzZTdxczhtejNrNSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/fUQ4rhUZJYiQsas6WD/giphy.gif',
-    width: 300,
-    height: 400,
+    id: 'sP0SLcBdcPYqKKnfaY',
+    title: 'Cat GIF',
+    url: 'https://media0.giphy.com/media/v1.Y2lkPTYzMTIxZGJiYmF1d21md3o2cjR6YzJieTJ5OTl6bW9xb3kzYjc4dnAzbXlvb25ibyZlcD12MV9naWZzX3NlYXJjaCZjdD1n/sP0SLcBdcPYqKKnfaY/giphy.gif',
+    width: 320,
+    height: 480
   },
   {
-    id: '6',
-    title: 'Messi is the best',
-    url: 'https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExNThyZXBwbHFtdHNpYnh4ZnN0aGswcWJydXNwdnpjaXV0eXNlYXp1YiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/8BSJinJ8of9L0unCqW/giphy.gif',
-    width: 350,
-    height: 280,
+    id: 'UotLuplZSzKRa',
+    title: 'International Cat Day Fighting GIF',
+    url: 'https://media4.giphy.com/media/v1.Y2lkPTYzMTIxZGJiYmF1d21md3o2cjR6YzJieTJ5OTl6bW9xb3kzYjc4dnAzbXlvb25ibyZlcD12MV9naWZzX3NlYXJjaCZjdD1n/UotLuplZSzKRa/giphy.gif',
+    width: 270,
+    height: 480
   },
+  {
+    id: '7NNqJw0T3cb62PMzXR',
+    title: 'Dance Cat GIF',
+    url: 'https://media4.giphy.com/media/v1.Y2lkPTYzMTIxZGJiYmF1d21md3o2cjR6YzJieTJ5OTl6bW9xb3kzYjc4dnAzbXlvb25ibyZlcD12MV9naWZzX3NlYXJjaCZjdD1n/7NNqJw0T3cb62PMzXR/giphy.gif',
+    width: 253,
+    height: 450
+  },
+  {
+    id: '2x0VePimPaFJDpGZ7H',
+    title: 'International Cat Day Cats GIF by MOODMAN',
+    url: 'https://media0.giphy.com/media/v1.Y2lkPTYzMTIxZGJiYmF1d21md3o2cjR6YzJieTJ5OTl6bW9xb3kzYjc4dnAzbXlvb25ibyZlcD12MV9naWZzX3NlYXJjaCZjdD1n/2x0VePimPaFJDpGZ7H/giphy.gif',
+    width: 480,
+    height: 480
+  },
+  {
+    id: 'v6HmjWFF80ByC2JcRl',
+    title: 'Cat GIF',
+    url: 'https://media1.giphy.com/media/v1.Y2lkPTYzMTIxZGJiYmF1d21md3o2cjR6YzJieTJ5OTl6bW9xb3kzYjc4dnAzbXlvb25ibyZlcD12MV9naWZzX3NlYXJjaCZjdD1n/v6HmjWFF80ByC2JcRl/giphy.gif',
+    width: 384,
+    height: 480
+  },
+  {
+    id: 'A0Zt7yuDULiy4ofmVD',
+    title: 'Cat Chilling GIF',
+    url: 'https://media3.giphy.com/media/v1.Y2lkPTYzMTIxZGJiYmF1d21md3o2cjR6YzJieTJ5OTl6bW9xb3kzYjc4dnAzbXlvb25ibyZlcD12MV9naWZzX3NlYXJjaCZjdD1n/A0Zt7yuDULiy4ofmVD/giphy.gif',
+    width: 288,
+    height: 308
+  }
 ];
