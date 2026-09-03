@@ -55,7 +55,7 @@ export const useTrafficLight = () => {
             return;
         } else if (currentLight === "green") {
             setCurrentLight("yellow");
-            setCountDown(1);
+            setCountDown(2);
             return;
         }
 
