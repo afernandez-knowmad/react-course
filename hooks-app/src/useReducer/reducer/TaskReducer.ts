@@ -16,10 +16,18 @@ export type TaskAction =
     | { type: 'DELETE_TODO', payload: number }
     | { type: 'TOGGLE_TODO', payload: number }
 
-
-export const TaskReducer = (state: TaskState, action: TaskAction): TaskState => {
+export const getTaskInitialState = (): TaskState => {
+    return {
+        todos: [],
+        length: 0,
+        completed: 0,
+        pending: 0,
+    }
+}
+export const taskReducer = (state: TaskState, action: TaskAction): TaskState => {
     switch (action.type) {
         case 'ADD_TODO': {
+
             const newTodo: Todo = {
                 id: Date.now(),
                 text: action.payload.trim(),
@@ -37,7 +45,6 @@ export const TaskReducer = (state: TaskState, action: TaskAction): TaskState => 
         }
         case 'DELETE_TODO': {
             const updatedTodos: Todo[] = state.todos.filter((todo) => todo.id !== action.payload);
-
 
             return {
                 ...state,
