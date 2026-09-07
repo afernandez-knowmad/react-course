@@ -1,7 +1,10 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import './index.css'
-import { MemoCounter } from './memos/MemoCounter.tsx'
+import { InstagromApp } from './useOptimistic/InstagromApp.tsx'
+import { Toaster } from 'sonner';
+
+// import { MemoCounter } from './memos/MemoCounter.tsx'
 // import { MemoHook } from './memos/MemoHook.tsx'
 // import { ScrambleWords } from './useReducer/ScrambleWords.tsx'
 // import { TasksApp } from './useReducer/TasksApp.tsx'
@@ -15,6 +18,7 @@ import { MemoCounter } from './memos/MemoCounter.tsx'
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
     {/* <TrafficLight /> */}
-    <MemoCounter />
+    <Toaster />
+    <InstagromApp />
   </StrictMode>,
 )
