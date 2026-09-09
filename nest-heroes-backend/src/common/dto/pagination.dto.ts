@@ -9,6 +9,11 @@ export class PaginationDto {
   @IsNumber()
   @IsOptional()
   @Min(0)
+  page?: number;
+
+  @IsNumber()
+  @IsOptional()
+  @Min(0)
   offset?: number;
 
   @IsOptional()

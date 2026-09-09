@@ -12,7 +12,7 @@ import { useSearchParams } from 'react-router';
 export const HomePage = () => {
 
   const [searchParams, setSearchParams] = useSearchParams();
-  console.log("🚀 ~ HomePage ~ searchParams:", searchParams.get('page'));
+  // console.log("🚀 ~ HomePage ~ searchParams:", searchParams.get('page'));
 
   const activeTab = searchParams.get('tab') ?? 'all';
   const page = searchParams.get('page') ?? '1';
@@ -25,7 +25,7 @@ export const HomePage = () => {
 
 
   const { data: heroesResponse } = useQuery({
-    queryKey: ['heroes'],
+    queryKey: ['heroes', { page, limit }], // Los argumentos de la funcion deberian ser siempre queryKeys
     queryFn: () => getHeroesByPageAction(+page, +limit),
     staleTime: 1000 * 60 * 5 // 5 minutos
   })
@@ -108,7 +108,7 @@ export const HomePage = () => {
         </Tabs>
 
         {/* Pagination */}
-        <CustomPagination totalPages={8} />
+        <CustomPagination totalPages={heroesResponse?.pages ?? 1} />
       </>
     </>
   );
