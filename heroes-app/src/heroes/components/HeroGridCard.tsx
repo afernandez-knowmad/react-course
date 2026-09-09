@@ -5,6 +5,7 @@ import { Button } from '@/components/ui/button';
 import { Card, CardHeader, CardContent } from '@/components/ui/card';
 import { Progress } from '@/components/ui/progress';
 import type { Hero } from '../types/hero.interface';
+import { useNavigate } from 'react-router';
 
 interface Props {
   hero: Hero
@@ -12,10 +13,18 @@ interface Props {
 
 
 export const HeroGridCard = ({ hero }: Props) => {
+
+  const navigate = useNavigate();
+
+  const handleClickCard = () => {
+    navigate(`/heroes/${hero.slug}`);
+  }
+
   return (
     <Card className="group overflow-hidden hover:shadow-xl transition-all duration-300 hover:-translate-y-1 bg-gradient-to-br from-white to-gray-50">
       <div className="relative h-64">
         <img
+          onClick={handleClickCard}
           src={hero.image}
           alt={hero.name}
           className="object-cover transition-all duration-500 group-hover:scale-110 absolute top-[-30px] w-full h-[410px]"
@@ -115,7 +124,7 @@ export const HeroGridCard = ({ hero }: Props) => {
 
             {
               hero.powers.slice(0, 3).map(power => (
-                <Badge variant="outline" className="text-xs">
+                <Badge variant="outline" className="text-xs" key={power}>
                   {power}
                 </Badge>
               ))
