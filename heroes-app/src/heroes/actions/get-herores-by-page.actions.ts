@@ -1,7 +1,19 @@
 import { heroApi } from "../api/hero.api"
+import type { HeroresResponse } from "../types/get-heroes.response";
 
-export const getHeroesByPage = async () => {
-    const { data } = await heroApi.get('/');
+const BASE_URL = import.meta.env.VITE_API_URL;
 
-    return data;
+export const getHeroesByPageAction = async (): Promise<HeroresResponse> => {
+    const { data } = await heroApi.get<HeroresResponse>('/');
+    console.log("🚀 ~ getHeroesByPageAction ~ data:", data)
+
+    const heroes = data.heroes.map(hero => ({
+        ...hero,
+        image: `${BASE_URL}/images/${hero.image}`
+    }));
+
+    return {
+        ...data,
+        heroes
+    };
 }

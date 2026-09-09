@@ -2,20 +2,28 @@ import { Tabs, TabsList, TabsTrigger, TabsContent } from '@/components/ui/tabs';
 import { CustomJumbotron } from '@/components/custom/CustomJumbotron';
 import { HeroStats } from '@/heroes/components/HeroStats';
 import { HeroGrid } from '@/heroes/components/HeroGrid';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { CustomPagination } from '@/components/custom/CustomPagination';
 import { CustomBreadcrumbs } from '@/components/custom/CustomBreadcrumbs';
-import { getHeroesByPage } from '@/heroes/actions/get-herores-by-page.actions';
+import { getHeroesByPageAction } from '@/heroes/actions/get-herores-by-page.actions';
+import { useQuery } from '@tanstack/react-query';
 
 export const HomePage = () => {
   const [activeTab, setActiveTab] = useState<
     'all' | 'favorites' | 'heroes' | 'villains'
   >('all');
 
-  useEffect(() => {
-    getHeroesByPage().then(() => {
-    })
-  }, []);
+  const { data: heroesResponse } = useQuery({
+    queryKey: ['heroes'],
+    queryFn: () => getHeroesByPageAction(),
+    staleTime: 1000 * 60 * 5 // 5 minutos
+  })
+  console.log("🚀 ~ HomePage ~ data:", heroesResponse);
+
+  // useEffect(() => {
+  //   getHeroesByPageAction().then(() => {
+  //   })
+  // }, []);
 
   return (
     <>
@@ -57,22 +65,22 @@ export const HomePage = () => {
 
           <TabsContent value="all">
             {/* Mostrar todos los personajes */}
-            <HeroGrid />
+            <HeroGrid heroes={heroesResponse?.heroes ?? []} />
           </TabsContent>
           <TabsContent value="favorites">
             {/* Mostrar todos los personajes favoritos */}
             <h1>Favoritos!!!</h1>
-            <HeroGrid />
+            <HeroGrid heroes={[]} />
           </TabsContent>
           <TabsContent value="heroes">
             {/* Mostrar todos los héroes */}
             <h1>Héroes</h1>
-            <HeroGrid />
+            <HeroGrid heroes={[]} />
           </TabsContent>
           <TabsContent value="villains">
             {/* Mostrar todos los Villanos */}
             <h1>Villanos</h1>
-            <HeroGrid />
+            <HeroGrid heroes={[]} />
           </TabsContent>
         </Tabs>
 
