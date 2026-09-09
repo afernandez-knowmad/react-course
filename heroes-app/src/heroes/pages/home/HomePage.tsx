@@ -29,12 +29,7 @@ export const HomePage = () => {
     queryFn: () => getHeroesByPageAction(+page, +limit),
     staleTime: 1000 * 60 * 5 // 5 minutos
   })
-  // console.log("🚀 ~ HomePage ~ data:", heroesResponse);
 
-  // useEffect(() => {
-  //   getHeroesByPageAction().then(() => {
-  //   })
-  // }, []);
 
   return (
     <>
