@@ -6,7 +6,7 @@ import {
     type InitialEntry,
 } from 'react-router';
 import { act, render, screen, waitFor } from '@testing-library/react';
-import type { PropsWithChildren } from 'react';
+// import type { PropsWithChildren } from 'react';
 
 import { FavoriteHeroProvider } from '@/heroes/context/FavoriteHeroContext';
 
