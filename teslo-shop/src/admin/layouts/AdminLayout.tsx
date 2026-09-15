@@ -1,5 +1,5 @@
 
-export const AdminLayout = () => {
+const AdminLayout = () => {
     return (
         <div>AdminLayout</div>
     )
