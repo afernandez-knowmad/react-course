@@ -1,6 +1,12 @@
+import { Outlet } from "react-router"
 
 export const ShopLayout = () => {
     return (
-        <div>ShopLayout</div>
+        <>
+            <main>
+                <div>ShopLayout</div>
+                <Outlet />
+            </main>
+        </>
     )
 }

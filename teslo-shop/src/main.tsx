@@ -1,10 +1,11 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
+import { RouterProvider } from 'react-router'
 import './index.css'
-import { TesloShopApp } from './TesloShopApp'
+import { tesloMainRouter } from './router/teslo-main.router'
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
-    <TesloShopApp />
+    <RouterProvider router={tesloMainRouter} />
   </StrictMode>,
 )
