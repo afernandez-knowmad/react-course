@@ -48,6 +48,10 @@ export const tesloMainRouter = createBrowserRouter([
         element: <AdminProductsPage />,
       },
       {
+        path: 'products/new',
+        element: <AdminProductPage />,
+      },
+      {
         path: 'products/:idProduct',
         element: <AdminProductPage />,
       }
