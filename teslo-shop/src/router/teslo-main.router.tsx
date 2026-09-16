@@ -7,6 +7,7 @@ import { LoginPage } from "../auth/pages/login/LoginPage";
 import { RegisterPage } from "../auth/pages/register/RegisterPage";
 import { AdminProductsPage } from "../admin/pages/products/AdminProductsPage";
 import { AdminProductPage } from "../admin/pages/product/AdminProductPage";
+import { DashboardPage } from "../admin/pages/dashboard/DashboardPage";
 import { lazy } from "react";
 
 const AuthLayout = lazy(() => import('@/auth/layouts/AuthLayout'));
@@ -40,7 +41,7 @@ export const tesloMainRouter = createBrowserRouter([
     children: [
       {
         index: true,
-        element: <Navigate to="/auth/login" />
+        element: <DashboardPage />,
       },
       {
         path: 'products',
