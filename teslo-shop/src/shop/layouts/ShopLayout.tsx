@@ -8,7 +8,6 @@ export const ShopLayout = () => {
             <CustomHeader />
 
             <main>
-                <div>ShopLayout</div>
                 <Outlet />
             </main>
 

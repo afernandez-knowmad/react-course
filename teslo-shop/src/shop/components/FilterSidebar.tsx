@@ -8,7 +8,7 @@ const FilterSidebar = () => {
 
   const [searchParams, setSearchParams] = useSearchParams();
   const currentSizes = searchParams.get('sizes')?.split(',') || [];
-  const currentPrices = searchParams.get('prices')?.split(',') || [];
+  // const currentPrices = searchParams.get('prices')?.split(',') || [];
 
   const handleSizeChange = (size: string) => {
     const newSizes = currentSizes.includes(size)
