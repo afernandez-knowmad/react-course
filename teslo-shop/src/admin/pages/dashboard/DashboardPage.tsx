@@ -1,4 +1,5 @@
 import ActivityFeed from "@/admin/components/ActivityFeed";
+import { AdminTitle } from "@/admin/components/AdminTitle";
 import Chart from "@/admin/components/Chart";
 import QuickActions from "@/admin/components/QuickActions";
 import StatCard from "@/admin/components/StatCard";
@@ -57,14 +58,7 @@ export const DashboardPage = () => {
     return (
         <>
             {/* Welcome Section */}
-            <div className="mb-8">
-                <h1 className="text-2xl font-bold text-gray-900 mb-2">
-                    Welcome back, John! 👋
-                </h1>
-                <p className="text-gray-600">
-                    Here's what's happening with your business today.
-                </p>
-            </div>
+            <AdminTitle title="Dashboard" subtitle="Aquí puedes ver el estado de tus estadisticas y metricas" />
 
             {/* Stats Grid */}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
